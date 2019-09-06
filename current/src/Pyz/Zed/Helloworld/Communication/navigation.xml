@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <helloworld>
+        <label>Helloworld</label>
+        <title>Helloworld</title>
+        <bundle>helloworld</bundle>
+        <controller>index</controller>
+        <action>index</action>
+    </helloworld>
+</config>
