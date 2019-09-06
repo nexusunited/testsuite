@@ -46,7 +46,7 @@ $config[PropelConstants::PROPEL_DEBUG] = true;
 $config[PropelOrmConstants::PROPEL_SHOW_EXTENDED_EXCEPTION] = true;
 $config[PropelConstants::ZED_DB_USERNAME] = 'spryker';
 $config[PropelConstants::ZED_DB_PASSWORD] = 'mate20mg';
-$config[PropelConstants::ZED_DB_HOST] = 'postgres';
+$config[PropelConstants::ZED_DB_HOST] = 'db';
 $config[PropelConstants::ZED_DB_PORT] = 5432;
 $config[PropelConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE_PGSQL];
 $config[PropelQueryBuilderConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE_PGSQL];
@@ -80,7 +80,7 @@ $config[SessionConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 $config[SessionConstants::ZED_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION_LIFETIME_1_YEAR;
 
 // ---------- Jenkins
-$config[SetupConstants::JENKINS_BASE_URL] = 'http://localhost:8080/';
+$config[SetupConstants::JENKINS_BASE_URL] = 'http://jenkins:8080/';
 $config[SetupConstants::JENKINS_DIRECTORY] = '/data/shop/development/current';
 
 // ---------- Zed request
