@@ -25,5 +25,6 @@ class Environment extends Module
         defined('APPLICATION_ROOT_DIR') || define('APPLICATION_ROOT_DIR', $rootDir);
         defined('APPLICATION_SOURCE_DIR') || define('APPLICATION_SOURCE_DIR', APPLICATION_ROOT_DIR . '/src');
         defined('APPLICATION_VENDOR_DIR') || define('APPLICATION_VENDOR_DIR', APPLICATION_ROOT_DIR . '/vendor');
+        defined('NXS_TEST_SHOW_SCORE') || define('NXS_TEST_SHOW_SCORE', 'false');
     }
 }
