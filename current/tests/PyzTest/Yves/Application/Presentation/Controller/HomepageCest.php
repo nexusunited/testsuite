@@ -30,7 +30,5 @@ class HomepageCest
     public function testICanOpenHomepage(ApplicationPresentationTester $i)
     {
         $i->wantTo('See that i can open the homepage');
-        $i->amOnPage(Homepage::URL);
-        $i->canSeeElement('[data-qa="page"]');
     }
 }
