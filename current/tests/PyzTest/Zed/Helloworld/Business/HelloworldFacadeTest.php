@@ -39,7 +39,7 @@ class HelloworldFacadeTest extends UnitScoring
     }
 
     /**
-     * @scoring 2ß
+     * @scoring 20
      */
     public function test2()
     {
