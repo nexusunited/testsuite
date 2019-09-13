@@ -7,6 +7,7 @@ use Codeception\Event\TestEvent;
 use Codeception\Events;
 use Codeception\Extension;
 use Codeception\TestInterface;
+use Maknz\Slack\Client;
 
 class RatingExtension extends Extension
 {
@@ -19,9 +20,17 @@ class RatingExtension extends Extension
     /**
      * Output Strings
      */
-    public const POINTS_COLLECTED = 'Points collected';
+    public const POINTS_COLLECTED = 'Crystals collected';
     public const RATING_ANNOTATION_NAME = 'score';
-    public const YOUR_SCORE = 'Your Score';
+    public const YOUR_SCORE = 'Your Crystals';
+    public const COLLECTED_SCORE = 'Collected Crystals';
+    public const TOTAL_SCORE = 'Total Crystals';
+    public const PROGRESS_UPDATE = '========Progress Update==========';
+
+    /**
+     * Slack Webhook
+     */
+    public const SLACK_HOOK_URL = 'https://hooks.slack.com/services/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';
 
     /**
      * Codeception Events
@@ -44,11 +53,17 @@ class RatingExtension extends Extension
     private $score_total = 0;
 
     /**
+     * @var \Maknz\Slack\Client
+     */
+    private $slackClient;
+
+    /**
      * @return void
      */
     public function _initialize(): void
     {
         $this->_reconfigure(['settings' => ['silent' => false]]);
+        $this->slackClient = new Client(self::SLACK_HOOK_URL);
     }
 
     /**
@@ -82,9 +97,16 @@ class RatingExtension extends Extension
     public function print(PrintResultEvent $e): void
     {
         $this->say(self::CRISTAL . ' ' . self::YOUR_SCORE . ' ' . $this->score . ' ' . self::CRISTAL);
-        $webhook = 'https://hooks.slack.com/services/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';
+        $this->notifySlack($e);
     }
 
+    private function notifySlack(PrintResultEvent $e) {
+        $this->slackClient->send(self::PROGRESS_UPDATE);
+        $this->slackClient->send('Passed: ' . count($e->getResult()->passed()) . ', ' .
+                                'Errors: ' . count($e->getResult()->errors()) . ', ' .
+                                'Failures: ' . count($e->getResult()->failures()));
+        $this->slackClient->send(self::COLLECTED_SCORE . ': ' . $this->score. ' (' .$this->getProgress(). '%), ' .self::TOTAL_SCORE . ': ' . $this->score_total);
+    }
     /**
      * @return int
      */
