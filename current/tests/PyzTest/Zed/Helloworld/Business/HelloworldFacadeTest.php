@@ -4,6 +4,7 @@
 namespace PyzTest\Zed\Helloworld\Business;
 
 
+use Codeception\Test\Unit;
 use Pyz\Zed\Helloworld\Business\HelloworldFacade;
 use PyzTest\Shared\NxsScoring\UnitScoring;
 
@@ -16,7 +17,7 @@ use PyzTest\Shared\NxsScoring\UnitScoring;
  * @group HelloworldTest
  * Add your own group annotations below this line
  */
-class HelloworldFacadeTest extends UnitScoring
+class HelloworldFacadeTest extends Unit
 {
     /**
      * @var HelloworldFacade
@@ -30,29 +31,19 @@ class HelloworldFacadeTest extends UnitScoring
     }
 
     /**
-     * @scoring 10
+     * @score 100
      */
-    public function testHello()
+    public function testExample1()
     {
-        $this->assertSame($this->helloWorldFacade->hello(),'hello world');
-        //$this->assertSame(true,false);
+        $this->assertSame(false,false);
     }
 
     /**
-     * @scoring 20
+     * @score 200
      */
-    public function test2()
+    public function testExample2()
     {
-        $this->assertTrue(false);
-    }
-
-    /**
-     * @scoring 30
-     */
-    public function test3()
-    {
-        $this->assertTrue(true);
-        $this->assertTrue(false);
+        $this->assertSame(true,false);
     }
 
 }

@@ -27,6 +27,7 @@ coverage:
 extensions:
     enabled:
         - Codeception\Extension\Phantoman
+        - \PyzTest\Shared\NxsScoring\CustomExtension
     config:
         Codeception\Extension\Phantoman:
             suites: ['Presentation']

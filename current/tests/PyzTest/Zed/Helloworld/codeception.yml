@@ -20,8 +20,7 @@ suites:
         - \SprykerTest\Shared\Testify\Helper\Environment
         - \SprykerTest\Shared\Testify\Helper\ConfigHelper
         - \SprykerTest\Shared\Propel\Helper\ConnectionHelper
-extensions:
-    enabled: [\PyzTest\Shared\NxsScoring\CustomExtension]
-    config:
-        MyCustomExtension:
-            param: value
+        - \SprykerTest\Shared\Testify\Helper\LocatorHelper:
+              projectNamespaces: ['Pyz']
+        - \SprykerTest\Shared\Testify\Helper\DependencyHelper
+        - \SprykerTest\Shared\Propel\Helper\TransactionHelper

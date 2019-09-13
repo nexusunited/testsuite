@@ -140,3 +140,9 @@ $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [
         RabbitMqEnv::RABBITMQ_STORE_NAMES => ['DE'],
     ],
 ];
+
+// ---------- Session
+$config[SessionConstants::SESSION_IS_TEST] = true;
+$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionConfig::SESSION_HANDLER_REDIS;
+$config[SessionConstants::ZED_SESSION_COOKIE_SECURE] = false;
+$config[SessionConstants::ZED_SESSION_SAVE_HANDLER] = SessionConfig::SESSION_HANDLER_REDIS;
