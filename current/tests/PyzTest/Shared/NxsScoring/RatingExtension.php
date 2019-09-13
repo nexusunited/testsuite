@@ -100,13 +100,18 @@ class RatingExtension extends Extension
         $this->notifySlack($e);
     }
 
-    private function notifySlack(PrintResultEvent $e) {
+    /**
+     * @return void
+     */
+    private function notifySlack(PrintResultEvent $e)
+    {
         $this->slackClient->send(self::PROGRESS_UPDATE);
         $this->slackClient->send('Passed: ' . count($e->getResult()->passed()) . ', ' .
                                 'Errors: ' . count($e->getResult()->errors()) . ', ' .
                                 'Failures: ' . count($e->getResult()->failures()));
-        $this->slackClient->send(self::COLLECTED_SCORE . ': ' . $this->score. ' (' .$this->getProgress(). '%), ' .self::TOTAL_SCORE . ': ' . $this->score_total);
+        $this->slackClient->send(self::COLLECTED_SCORE . ': ' . $this->score . ' (' . $this->getProgress() . '%), ' . self::TOTAL_SCORE . ': ' . $this->score_total);
     }
+
     /**
      * @return int
      */
