@@ -8,7 +8,7 @@ use Codeception\Events;
 use Codeception\Extension;
 use Codeception\TestInterface;
 
-class CustomExtension extends Extension
+class RatingExtension extends Extension
 {
     /**
      * Emoji codes
@@ -82,6 +82,7 @@ class CustomExtension extends Extension
     public function print(PrintResultEvent $e): void
     {
         $this->say(self::CRISTAL . ' ' . self::YOUR_SCORE . ' ' . $this->score . ' ' . self::CRISTAL);
+        $webhook = 'https://hooks.slack.com/services/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';
     }
 
     /**
