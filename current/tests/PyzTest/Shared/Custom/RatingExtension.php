@@ -96,8 +96,8 @@ class RatingExtension extends Extension
      */
     public function print(PrintResultEvent $e): void
     {
-        $e->getResult()->score=$this->score;
-        $e->getResult()->score_total=$this->score_total;
+        $e->getResult()->score = $this->score;
+        $e->getResult()->score_total = $this->score_total;
         $this->say(self::CRISTAL . ' ' . self::YOUR_SCORE . ' ' . $this->score . ' ' . self::CRISTAL);
         $this->notifySlack($e);
     }
