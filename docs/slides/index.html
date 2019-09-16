@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/nexus.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Ziele🤓🙉</h2>
+					<ul>
+						<li>Mehr Transparenz zum Recruiting Prozess</li>
+						<li>Messbare Ergebnisse schaffen</li>
+						<li>Flexible Umgebung um Skills zu zeigen</li>
+						<li>Projektbezogene realistische Testfälle</li>
+						<li>Von jedem erweiterbar</li>
+					</ul>
+				</section>
+				<section><h2>Fragen 🧐</h2>
+					<ul>
+						<li>Wie erreichen wir mehr Transparenz?</li>
+						<li>Wie setzen wir richtig an um neben der Code Erstellung auch das Verständnis zu ermitteln? </li>
+						<li>Flexible Umgebung um Skills zu beweisen</li>
+					</ul></section>
+				<section><section>
+					<h2>Pretty Code</h2>
+					<pre><code class="hljs" data-trim data-line-numbers="4,8-11">
+						import React, { useState } from 'react';
+
+						function Example() {
+						  const [count, setCount] = useState(0);
+
+						  return (
+							&lt;div&gt;
+							  &lt;p&gt;You clicked {count} times&lt;/p&gt;
+							  &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+								Click me
+							  &lt;/button&gt;
+							&lt;/div&gt;
+						  );
+						}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section></section>
+				<div class="nxs--logo"><img src="assets/nexus-united.png" alt="nexus united"/></div>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
