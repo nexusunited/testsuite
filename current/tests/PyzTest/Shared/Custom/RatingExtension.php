@@ -20,12 +20,12 @@ class RatingExtension extends Extension
     /**
      * Output Strings
      */
-    public const POINTS_COLLECTED = 'Crystals collected';
+    public const POINTS_COLLECTED = 'Gems collected';
     public const RATING_ANNOTATION_NAME = 'score';
-    public const YOUR_SCORE = 'Your Crystals';
-    public const COLLECTED_SCORE = 'Collected Crystals';
-    public const TOTAL_SCORE = 'Total Crystals';
-    public const PROGRESS_UPDATE = '========Progress Update==========';
+    public const YOUR_SCORE = 'Your Gems';
+    public const COLLECTED_SCORE = 'Collected Gems';
+    public const TOTAL_SCORE = 'Total Gems';
+    public const PROGRESS_UPDATE = '======== :see_no_evil: Progress Update==========';
 
     /**
      * Slack Webhook
