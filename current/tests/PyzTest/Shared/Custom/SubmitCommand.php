@@ -24,7 +24,7 @@ class SubmitCommand extends Run implements CustomCommandInterface
     public function __construct($name = null)
     {
         parent::__construct($name);
-        $this->firebase = new FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
+        $this->firebase = new FirebaseLib(self::DEFAULT_URL, self::DEFAULT_TOKEN);
     }
 
     /**
@@ -66,16 +66,17 @@ class SubmitCommand extends Run implements CustomCommandInterface
                 'date' => $dateTime->format('c'),
                 'score' => $resultScore,
                 'score_total' => $resultScoreTotal,
-                'id' => $submitNameId,
+                'passed' => count($this->codecept->getResult()->passed()),
+                'errors' => count($this->codecept->getResult()->errors()),
+                'failures' => count($this->codecept->getResult()->failures()),
             ];
 
-            $this->firebase->set(DEFAULT_PATH . '/' . $submitNameId, $userScoreData);
-        }
-
-        if (!$this->codecept->getResult()->wasSuccessful()) {
-            exit(1);
+            $this->firebase->set(self::DEFAULT_PATH . '/' . $submitNameId, $userScoreData);
         }
 
         print_r($this->options);
+        if (!$this->codecept->getResult()->wasSuccessful()) {
+            exit(1);
+        }
     }
 }

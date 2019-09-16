@@ -99,8 +99,7 @@ class RatingExtension extends Extension
         $e->getResult()->score=$this->score;
         $e->getResult()->score_total=$this->score_total;
         $this->say(self::CRISTAL . ' ' . self::YOUR_SCORE . ' ' . $this->score . ' ' . self::CRISTAL);
-//        $this->notifySlack($e);
-
+        $this->notifySlack($e);
     }
 
     /**
