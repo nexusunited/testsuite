@@ -182,6 +182,7 @@
     "codeception/codeception": "^2.3.8",
     "fzaninotto/faker": "^1.6",
     "jakoch/phantomjs-installer": "^2.1.0",
+    "ktamas77/firebase-php": "^2.2",
     "pdepend/pdepend": "^2.2.4",
     "phpstan/phpstan": "^0.10.2",
     "phpunit/phpunit": "^7.0.0",

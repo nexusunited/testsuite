@@ -1,6 +1,6 @@
 <?php
 
-namespace PyzTest\Shared\NxsScoring;
+namespace PyzTest\Shared\Custom;
 
 use Codeception\Event\PrintResultEvent;
 use Codeception\Event\TestEvent;
@@ -96,8 +96,11 @@ class RatingExtension extends Extension
      */
     public function print(PrintResultEvent $e): void
     {
+        $e->getResult()->score=$this->score;
+        $e->getResult()->score_total=$this->score_total;
         $this->say(self::CRISTAL . ' ' . self::YOUR_SCORE . ' ' . $this->score . ' ' . self::CRISTAL);
-        $this->notifySlack($e);
+//        $this->notifySlack($e);
+
     }
 
     /**

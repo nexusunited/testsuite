@@ -6,7 +6,6 @@ namespace PyzTest\Zed\Helloworld\Business;
 
 use Codeception\Test\Unit;
 use Pyz\Zed\Helloworld\Business\HelloworldFacade;
-use PyzTest\Shared\NxsScoring\UnitScoring;
 
 /**
  * Auto-generated group annotations

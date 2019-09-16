@@ -25,9 +25,10 @@ coverage:
     whitelist: { include: ['src/Pyz/*.php'] }
 
 extensions:
+    commands: [PyzTest\Shared\Custom\SubmitCommand]
     enabled:
         - Codeception\Extension\Phantoman
-        - \PyzTest\Shared\NxsScoring\RatingExtension
+        - \PyzTest\Shared\Custom\RatingExtension
     config:
         Codeception\Extension\Phantoman:
             suites: ['Presentation']
