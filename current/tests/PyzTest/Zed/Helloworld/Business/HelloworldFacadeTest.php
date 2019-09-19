@@ -30,7 +30,7 @@ class HelloworldFacadeTest extends Unit
     }
 
     /**
-     * @score 1
+     * @score 100
      */
     public function testExample1()
     {
@@ -38,7 +38,7 @@ class HelloworldFacadeTest extends Unit
     }
 
     /**
-     * @score 2
+     * @score 200
      */
     public function testExample2()
     {

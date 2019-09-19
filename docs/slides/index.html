@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Nexus - Testsuite</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -26,63 +26,56 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Ziele</h2>
+					<h2>Nexus Hackathon (06.09.19 - 20.09.19)</h2>
+				</section>
+				<section>
+					<h2>Die Idee</h2>
 					<ul>
 						<li>Mehr Transparenz zum Recruiting Prozess</li>
-						<li>Messbare Ergebnisse</li>
+						<li>Messbare Ergebnisse zu Testaufgaben</li>
 						<li>Projektbezogene realistische Testfälle</li>
 						<li>Einfach erweiterbar</li>
+						<li>Kein Projekt- oder Framework bezogenes Wissen erforderlich</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Fragen</h2>
 					<ul>
 						<li>Wie erreichen wir mehr Transparenz?</li>
-						<li>Wie setzen wir richtig an um neben der Code Erstellung auch das Verständnis zu ermitteln? </li>
-						<li>Flexible Umgebung um Skills zu beweisen</li>
+						<li>Wie prüfen wir Skills zur Code Erstellung und zum Debugging?</li>
+						<li>Wie bleibt es langfristig aktuell?</li>
+						<li>Wie kann es Spaß machen?</li>
 					</ul></section>
 				<section>
-				<div class="nxs--logo"><img src="assets/nexus-united.png" alt="nexus united"/></div>
 				<section>
-					<h2>Zukünftiges</h2>
+					<h2>Testsuite</h2>
 					<ul>
-						<li>Definition unterschiedlichster Anwendungsfälle</li>
+						<li>Definition unterschiedlichster Anwendungsfälle (z.B. Bugs fixen oder eigene Module entwickeln)</li>
 						<li>Erweiterung der Nexus internen Academy</li>
 						<li>Stetig wachsende Qualitfizierungsmöglichkeiten</li>
+						<li>Klare Aufgabenbeschreibung und Vorgaben (Branching)</li>
+						<li>Docker by default</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Testsuite</h2>
 					<ul>
-						<li>Definition unterschiedlichster Anwendungsfälle</li>
-						<li>Erweiterung der Nexus internen Academy</li>
-						<li>Stetig wachsende Qualitfizierungsmöglichkeiten</li>
+						<li>Sichtbares Complexity Scoring via Annotations (1,2,4,8,16)</li>
+						<li>Automatisches pushen der Zwischenergebnisse nach Slack</li>
+						<li>Ranglist submitting nach Firebase</li>
 					</ul>
 				</section>
 				<section>
-					<h2>Pretty Code</h2>
-					<pre>
-						<code class="hljs" data-trim data-line-numbers="2,10">
-						/**
-						 * @score 1
-						 */
-						public function testExample1()
-						{
-							$this->assertFalse(false);
-						}
-
-						/**
-						 * @score 2
-						 */
-						public function testExample2()
-						{
-							$this->assertTrue(false);
-						}
-					</code>
-					</pre>
+					<h2>Demo</h2>
+					<a href="https://github.com/nexusnetsoftgmbh/testsuite">https://github.com/nexusnetsoftgmbh/testsuite</a>
+					<a href="https://github.com/nexusnetsoftgmbh/testsuite">https://console.firebase.google.com/u/0/project/nxstestsuite/</a>
+					<a href="http://lovely-wire.surge.sh/">http://lovely-wire.surge.sh/</a>
 				</section>
-				<div class="nxs--logo"><img src="assets/nexus-united.png" alt="nexus united"/></div>
+				<section>
+					<h2>Danke</h2>
+				</section>
 			</div>
+			<div class="nxs--logo"><img src="assets/nexus-united.png" alt="nexus united"/></div>
 		</div>
 
 		<script src="js/reveal.js"></script>
