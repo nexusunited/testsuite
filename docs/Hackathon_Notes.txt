@@ -1,0 +1,9 @@
+quick-star.surge.sh
+
+Notes Demo
+ - Slack Channel öffnen
+ - Firebase öffnen
+ - Command + Extension zeigen
+ - Test öffnen und ausführen  (total Gems nur im channel sichtbar)
+ - Test fixen und ausführen
+ - Test Score submitten
