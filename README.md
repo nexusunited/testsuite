@@ -1,4 +1,4 @@
-![Testsuite Robo(https://raw.githubusercontent.com/nexusnetsoftgmbh/testsuite/master/current/data/import/icecat_biz_data/__IHADcl_400x400.jpg)
+![GitHub Logo](/current/data/import/icecat_biz_data/__IHADcl_400x400.jpg)
 
  ## Rules :fire:
  This testsuite contains :x: failing tests that need to be fixed by writing and adjusting the related parts inside the code.
