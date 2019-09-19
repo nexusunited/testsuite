@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="LiselTime">
+        <property name="MessageId" dataBuilderRule="md5"/>
+        <property name="StoppId" dataBuilderRule="md5"/>
+        <property name="Eta" dataBuilderRule="date('Y-m-d\TH:i:s', '+1 hours')"/>
+        <property name="Event" dataBuilderRule="randomDigit"/>
+        <property name="Lat" dataBuilderRule="latitude(-90, 90)"/>
+        <property name="Lon" dataBuilderRule="longitude(-180, 180)"/>
+        <property name="TimeStamp" dataBuilderRule="date('Y-m-d\TH:i:s', 'now')"/>
+        <property name="ScemId" dataBuilderRule="md5"/>
+    </transfer>
+
+</transfers>

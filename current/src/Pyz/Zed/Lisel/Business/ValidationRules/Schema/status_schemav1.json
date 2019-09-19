@@ -1,0 +1,40 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "required": [
+    "StoppId",
+    "Status",
+    "Ata"
+  ],
+  "properties": {
+    "StoppId": {
+      "$id": "/properties/StoppId",
+      "type": "string",
+      "title": "The Stoppid Schema ",
+      "default": "",
+      "examples": [
+        "4321"
+      ]
+    },
+    "Status": {
+      "$id": "/properties/Status",
+      "type": "integer",
+      "title": "The Status Schema ",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "Ata": {
+      "$id": "/properties/Ata",
+      "type": "string",
+      "title": "The Ata Schema ",
+      "default": "",
+      "examples": [
+        "2017-12-06T08:30:00"
+      ]
+    }
+  }
+}

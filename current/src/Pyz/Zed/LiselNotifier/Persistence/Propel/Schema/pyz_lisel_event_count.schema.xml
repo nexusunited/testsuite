@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
+          xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\LiselTime\Persistence" package="src.Orm.Zed.LiselTime.Persistence">
+
+    <table name="nxs_lisel_events" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="id_customer" required="true" type="INTEGER"/>
+        <column name="stopp_id" required="true" size="255" type="VARCHAR"/>
+        <column name="event" required="true" size="255" type="VARCHAR"/>
+        <column name="created_at" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP"/>
+        <index>
+            <index-column name="id_customer" />
+            <index-column name="stopp_id"/>
+            <index-column name="event"/>
+        </index>
+    </table>
+</database>

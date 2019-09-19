@@ -1,0 +1,129 @@
+{% extends '@Application/Layout/layout.twig' %}
+
+{% block content %}
+
+    <div class="panel panel-default">
+        <div class="panel-heading">PTA Request Simulator</div>
+        <div class="panel-body">
+            <form method="post">
+                <div class="form-group">
+                    <label>Tour Number</label><input type="text" name="tourid" class="form-control">
+                    <label>Stop Number</label><input type="text" name="stopid" class="form-control">
+                    <label>Temperature range</label><input type="text" name="temp" class="form-control">
+                    <label>Pta Date</label>
+                    <input type="datetime-local" name="pta" class="form-control">
+                    {% if ptaresponse is not empty %}
+                        <label>Pta Response</label>
+                        <textarea class="form-control" name="etaresponse" rows="3">{{ ptaresponse }}</textarea>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary" name="sendPtaRequest">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">ETA Request Simulator</div>
+        <div class="panel-body">
+            <form method="post">
+                <div class="form-group">
+                    <label>Stop Number</label><input type="text" name="stopid" class="form-control"><label>Eta Date</label>
+                    <input type="datetime-local" name="eta" class="form-control">
+                    {% if etaresponse is not empty %}
+                        <label>Eta Response</label>
+                        <textarea class="form-control" name="ptaresponse" rows="3">{{ etaresponse }}</textarea>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary" name="sendEtaRequest">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">ATA Request Simulator</div>
+        <div class="panel-body">
+            <form method="post">
+                <div class="form-group">
+                    <label>Stop Number</label><input type="text" name="stopid" class="form-control">
+                    <label>Status Code</label><input type="text" name="statuscode" class="form-control">
+                    <label>Ata Date</label>
+                    <input type="datetime-local" name="ata" class="form-control">
+                    {% if ataresponse is not empty %}
+                        <label>Ata Response</label>
+                        <textarea class="form-control" name="ataresponse" rows="3">{{ ataresponse }}</textarea>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary" name="sendAtaRequest">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">DHL Delivery PTA Simulator</div>
+        <div class="panel-body">
+            <form method="post">
+                <div class="form-group">
+                    <label>Delivery Number</label><input type="text" name="dhldeliverynumber" class="form-control">
+                    <label>Delivery Date</label>
+                    <input type="datetime-local" name="dhlpta" class="form-control">
+                    {% if dhlresponse is not empty %}
+                        <label>DHL Response</label>
+                        <textarea class="form-control" name="dhlresponse" rows="3">{{ dhlresponse }}</textarea>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary" name="sendDhlRequest">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">DHL ICE Simulator</div>
+        <div class="panel-body">
+            <form method="post">
+                <div class="form-group">
+                    <label>Delivery Number</label><input type="text" name="dhldeliverynumber" class="form-control">
+                    <label>ICE Code</label><input type="text" name="dhlice" class="form-control">
+                    <label>Event Timestamp</label>
+                    <input type="datetime-local" name="dhlicetimestamp" class="form-control">
+                    {% if dhliceresponse is not empty %}
+                        <label>DHL Response</label>
+                        <textarea class="form-control" name="dhlresponse" rows="3">{{ dhliceresponse }}</textarea>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary" name="sendDhlIceRequest">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Delete Demo Data</div>
+        <div class="panel-body">
+            {% if deleteresponse is not empty %}
+                <div class="alert alert-success">
+                    <strong>Success!</strong> {{ deleteresponse }}
+                </div>
+            {% endif %}
+
+            <form method="post">
+                <label>Tour Number</label><input type="text" name="tourid" class="form-control">
+                <label>Stop Number</label><input type="text" name="stopid" class="form-control">
+                <button type="submit" class="btn btn-primary" name="delete">Submit deletion</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Start Worker</div>
+        <div class="panel-body">
+            {% if startworker is not empty %}
+                <label>Error Response</label>
+                <textarea class="form-control" name="ataresponse" rows="3">{{ startworker }}</textarea>
+            {% endif %}
+
+            <form method="post">
+                <button type="submit" class="btn btn-primary" name="startWorker">Start Worker</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

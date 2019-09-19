@@ -1,7 +1,11 @@
+
+
+![alt text](https://raw.githubusercontent.com/username/projectname/master/__IHADcl_400x400.jpg
+
  ## Rules :fire:
  This testsuite contains :x: failing tests that need to be fixed by writing and adjusting the related parts inside the code.
  
- Depending on the complexity level of :heavy_check_mark: passing tests you will archive a different amount of :gem:, try to get much :gem: as possible. 
+ Depending on the complexity level (1,2,4,8,16) of :heavy_check_mark: passing tests you will archive a different amount of :gem:, try to get much :gem: as possible. 
  All tests are readonly and should not be changed. 
  
  If you are finished, please push your changes to your branch and submit results by executing `vendor/bin/codecept run --submit yourbranch`.

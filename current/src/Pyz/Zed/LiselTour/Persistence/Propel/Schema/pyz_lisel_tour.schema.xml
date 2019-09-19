@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\LiselTour\Persistence" package="src.Orm.Zed.LiselTour.Persistence">
+
+    <table name="nxs_tour" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="id_nxs_tour" required="true" type="INTEGER" primaryKey="true" autoIncrement="true"/>
+        <column name="tour_nummer" required="true" size="255" type="VARCHAR"/>
+        <column name="dc_name" size="255" type="VARCHAR"/>
+        <column name="tour_date" type="TIMESTAMP"/>
+        <column name="vehicle" size="255" type="VARCHAR"/>
+        <column name="tour_type" type="INTEGER"/>
+        <column name="created_at" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP"/>
+        <id-method-parameter value="nxs_tour_pk_seq"/>
+    </table>
+
+    <table name="nxs_stop" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="id_nxs_stop" required="true" type="INTEGER" primaryKey="true" autoIncrement="true"/>
+        <column name="fk_id_nxs_tour" required="true" type="INTEGER"/>
+        <column name="stopp_id" required="true" size="255" type="VARCHAR"/>
+        <column name="name" size="255" type="VARCHAR"/>
+        <column name="street" size="255" type="VARCHAR"/>
+        <column name="city" size="255" type="VARCHAR"/>
+        <column name="zip" type="INTEGER"/>
+        <column name="pta" type="TIMESTAMP"/>
+        <column name="customer_nr" required="true" size="255" type="VARCHAR"/>
+        <column name="delivery_number" required="true" size="255" type="VARCHAR"/>
+        <column name="invoice_number" required="true" size="255" type="VARCHAR"/>
+        <column name="created_at" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP"/>
+        <index>
+            <index-column name="stopp_id" />
+            <index-column name="customer_nr" />
+        </index>
+        <foreign-key name="nxs_stop-fk_id_nxs_tour" foreignTable="nxs_tour" onDelete="CASCADE">
+            <reference foreign="id_nxs_tour" local="fk_id_nxs_tour"/>
+        </foreign-key>
+    <id-method-parameter value="nxs_stop_pk_seq"/></table>
+
+    <table name="nxs_order" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="id_nxs_order" required="true" type="INTEGER" primaryKey="true" autoIncrement="true"/>
+        <column name="fk_id_nxs_stop" required="true" type="INTEGER"/>
+        <column name="sortiment" type="INTEGER"/>
+        <column name="temperaturbereich" type="INTEGER"/>
+        <column name="thm_anzahl" type="INTEGER"/>
+        <column name="order_no" size="255" type="VARCHAR"/>
+        <column name="created_at" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP"/>
+        <foreign-key name="fn_nxs_order-fk_id_nxs_stop" foreignTable="nxs_stop" onDelete="CASCADE">
+            <reference foreign="id_nxs_stop" local="fk_id_nxs_stop"/>
+        </foreign-key>
+    <id-method-parameter value="nxs_order_pk_seq"/></table>
+
+    <table name="nxs_article" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="id_nxs_article" required="true" type="INTEGER" primaryKey="true" autoIncrement="true"/>
+        <column name="fk_id_nxs_order" required="true" type="INTEGER"/>
+        <column name="name" required="true" size="255" type="VARCHAR"/>
+        <column name="art_no" required="true" size="255" type="VARCHAR"/>
+        <column name="created_at" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP"/>
+        <foreign-key name="fn_nxs_article-fk_id_nxs_order" foreignTable="nxs_order" onDelete="CASCADE">
+            <reference foreign="id_nxs_order" local="fk_id_nxs_order"/>
+        </foreign-key>
+    <id-method-parameter value="nxs_article_pk_seq"/></table>
+
+</database>

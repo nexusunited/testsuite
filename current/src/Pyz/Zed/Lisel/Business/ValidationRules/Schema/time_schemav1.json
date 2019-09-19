@@ -1,0 +1,110 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "SingleTimeMessages": {
+      "$id": "/properties/SingleTimeMessages",
+      "type": "array",
+      "items": {
+        "$id": "/properties/SingleTimeMessages/items",
+        "type": "object",
+        "required": [
+          "MessageId",
+          "StoppId",
+          "Eta",
+          "Ata",
+          "Event",
+          "Lat",
+          "Lon",
+          "TimeStamp",
+          "ScemId"
+        ],
+        "properties": {
+          "MessageId": {
+            "$id": "/properties/SingleTimeMessages/items/properties/MessageId",
+            "type": "string",
+            "title": "The Messageid Schema ",
+            "default": "",
+            "examples": [
+              "54321"
+            ]
+          },
+          "StoppId": {
+            "$id": "/properties/SingleTimeMessages/items/properties/StoppId",
+            "type": "string",
+            "title": "The Stoppid Schema ",
+            "default": "",
+            "examples": [
+              "54321"
+            ]
+          },
+          "Eta": {
+            "$id": "/properties/SingleTimeMessages/items/properties/Eta",
+            "type": "string",
+            "title": "The Eta Schema ",
+            "default": "",
+            "examples": [
+              "2017-12-05T05:10:00"
+            ]
+          },
+          "Ata": {
+            "$id": "/properties/SingleTimeMessages/items/properties/Ata",
+            "type": "string",
+            "title": "The Ata Schema ",
+            "default": "",
+            "examples": [
+              "2017-12-06T08:30:00"
+            ]
+          },
+          "Event": {
+            "$id": "/properties/SingleTimeMessages/items/properties/Event",
+            "type": "integer",
+            "title": "The Event Schema ",
+            "default": 0,
+            "examples": [
+              10
+            ]
+          },
+          "Lat": {
+            "$id": "/properties/SingleTimeMessages/items/properties/Lat",
+            "type": "string",
+            "title": "The Lat Schema ",
+            "default": 0,
+            "examples": [
+              "51.12311935424805"
+            ]
+          },
+          "Lon": {
+            "$id": "/properties/SingleTimeMessages/items/properties/Lon",
+            "type": "string",
+            "title": "The Lon Schema ",
+            "default": 0,
+            "examples": [
+              "9.234000205993652"
+            ]
+          },
+          "TimeStamp": {
+            "$id": "/properties/SingleTimeMessages/items/properties/TimeStamp",
+            "type": "string",
+            "title": "The Timestamp Schema ",
+            "default": "",
+            "examples": [
+              "2017-12-05T05:18:13"
+            ]
+          },
+          "ScemId": {
+            "$id": "/properties/SingleTimeMessages/items/properties/ScemId",
+            "type": "string",
+            "title": "The Scemid Schema ",
+            "default": "",
+            "examples": [
+              "234234"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="ScenarioLog">
+        <property name="eventName" dataBuilderRule="randomElement(['ata', 'first_pta', 'eta', 'FIRST_DHL', 'first_eta', 'always_update_eta'])"/>
+        <property name="customerNumber" dataBuilderRule="md5"/>
+        <property name="dateTime" dataBuilderRule="date('Y-m-d\TH:i:s', '-3 hours')"/>
+        <property name="stoppId" dataBuilderRule="numberBetween(1,3000)"/>
+        <property name="tourNumber" dataBuilderRule="md5"/>
+        <property name="deliveryNumber" dataBuilderRule="md5"/>
+    </transfer>
+
+</transfers>

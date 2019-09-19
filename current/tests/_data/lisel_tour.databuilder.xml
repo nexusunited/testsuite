@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="LiselTour">
+        <property name="TourNummer" dataBuilderRule="md5"/>
+        <property name="DcName" dataBuilderRule="company"/>
+        <property name="TourDate" dataBuilderRule="date('Y-m-d\TH:i:s', 'now')"/>
+        <property name="Vehicle" dataBuilderRule="sentence(2)"/>
+        <property name="TourType" dataBuilderRule="randomElement(['0', '5'])"/>
+    </transfer>
+
+    <transfer name="StoppListe">
+        <property name="StoppId" dataBuilderRule="uuid"/>
+        <property name="Name" dataBuilderRule="company"/>
+        <property name="Street" dataBuilderRule="streetAddress"/>
+        <property name="City" dataBuilderRule="city"/>
+        <property name="Zip" dataBuilderRule="postcode"/>
+        <property name="Pta" dataBuilderRule="date('Y-m-d\TH:i:s', '+12 hour')"/>
+        <property name="CustomerNr" dataBuilderRule="md5"/>
+        <property name="DeliveryNumber" dataBuilderRule="randomNumber(9)"/>
+        <property name="InvoiceNumber" dataBuilderRule="uuid"/>
+    </transfer>
+
+    <transfer name="AuftragListe">
+        <property name="Sortiment" dataBuilderRule="randomElement(['0', '5', '10'])"/>
+        <property name="Temperaturbereich" dataBuilderRule="randomElement(['0', '1', '2'])"/>
+        <property name="ThmAnzahl" dataBuilderRule="randomDigit"/>
+        <property name="OrderNo" dataBuilderRule="randomNumber(8)"/>
+    </transfer>
+
+    <transfer name="ArtikelListe">
+        <property name="Name" dataBuilderRule="firstName"/>
+        <property name="ArtNo" dataBuilderRule="randomNumber(4)"/>
+    </transfer>
+
+</transfers>

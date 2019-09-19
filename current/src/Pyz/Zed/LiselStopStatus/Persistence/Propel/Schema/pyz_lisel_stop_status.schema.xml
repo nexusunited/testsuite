@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
+          xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\LiselStopStatus\Persistence" package="src.Orm.Zed.LiselStopStatus.Persistence">
+
+    <table name="nxs_stop_status" idMethod="native" allowPkInsert="true" identifierQuoting="true">
+        <column name="stopp_id" primaryKey="true" size="255" type="VARCHAR"/>
+        <column name="status" required="true" type="INTEGER"/>
+        <column name="ata" required="true" type="TIMESTAMP"/>
+        <column name="created" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP" />
+        <index>
+            <index-column name="stopp_id" />
+        </index>
+    </table>
+</database>

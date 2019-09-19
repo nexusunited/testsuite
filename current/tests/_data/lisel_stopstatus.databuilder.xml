@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="LiselStopStatus">
+        <property name="StoppId" dataBuilderRule="md5"/>
+        <property name="Status" dataBuilderRule="randomElement(['0', '5', '10', '15', '20', '25'])"/>
+        <property name="Ata" dataBuilderRule="date('Y-m-d\TH:i:s', '+1 hours')"/>
+    </transfer>
+</transfers>

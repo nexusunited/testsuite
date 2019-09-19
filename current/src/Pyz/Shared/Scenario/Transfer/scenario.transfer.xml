@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<transfers
+    xmlns="spryker:transfer-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+
+    <!--<transfer name="AbstractScenario">-->
+        <!--<property name="name" type="string" />-->
+        <!--<property name="scenario1Checkbox" type="bool" />-->
+    <!--</transfer>-->
+
+    <transfer name="ScenarioToCustomer">
+        <property name="customer" type="Customer" />
+        <property name="abstractScenario" type="AbstractScenario[]" />
+    </transfer>
+
+    <transfer name="AbstractScenario">
+        <property name="checkbox" type="bool" />
+        <property name="scenarioName" type="string" />
+    </transfer>
+
+    <!--Is used by data_class on POST action + filled automatically-->
+    <transfer name="ScenarioForm">
+        <property name="scenario1Checkbox" type="bool" />
+        <property name="scenario2Checkbox" type="bool" />
+        <property name="scenario3Checkbox" type="bool" />
+    </transfer>
+
+    <!--Is used on default by symfony form -->
+    <transfer name="Quote">
+        <property name="abstractScenario" type="AbstractScenario[]" />
+        <property name="scenario1Checkbox" type="bool" />
+        <property name="scenario2Checkbox" type="bool" />
+        <property name="scenario3Checkbox" type="bool" />
+    </transfer>
+
+</transfers>

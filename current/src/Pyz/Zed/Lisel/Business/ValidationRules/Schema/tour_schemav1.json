@@ -1,0 +1,234 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "required": [
+    "TourNummer",
+    "DcName",
+    "TourDate",
+    "Vehicle",
+    "TourType"
+  ],
+  "properties": {
+    "TourNummer": {
+      "$id": "/properties/TourNummer",
+      "type": "string",
+      "title": "The Tournummer Schema ",
+      "default": "",
+      "examples": [
+        "1936603"
+      ]
+    },
+    "DcName": {
+      "$id": "/properties/DcName",
+      "type": "string",
+      "title": "The Dcname Schema ",
+      "default": "",
+      "examples": [
+        "Berlin"
+      ]
+    },
+    "TourDate": {
+      "$id": "/properties/TourDate",
+      "type": "string",
+      "title": "The Tourdate Schema ",
+      "default": "",
+      "examples": [
+        "2018-04-09T11:45:39"
+      ]
+    },
+    "Vehicle": {
+      "$id": "/properties/Vehicle",
+      "type": "string",
+      "title": "The Vehicle Schema ",
+      "default": "",
+      "examples": [
+        "Vehiclename"
+      ]
+    },
+    "TourType": {
+      "$id": "/properties/TourType",
+      "type": "integer",
+      "title": "The Tourtype Schema ",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "StoppListe": {
+      "$id": "/properties/StoppListe",
+      "type": "array",
+      "items": {
+        "$id": "/properties/StoppListe/items",
+        "type": "object",
+        "required": [
+          "StoppId",
+          "Name",
+          "Street",
+          "City",
+          "Zip",
+          "Pta",
+          "CustomerNr",
+          "DeliveryNumber",
+          "InvoiceNumber"
+        ],
+        "properties": {
+          "StoppId": {
+            "$id": "/properties/StoppListe/items/properties/StoppId",
+            "type": "string",
+            "title": "The Stoppid Schema ",
+            "default": "",
+            "examples": [
+              "24435233"
+            ]
+          },
+          "Name": {
+            "$id": "/properties/StoppListe/items/properties/Name",
+            "type": "string",
+            "title": "The Name Schema ",
+            "default": "",
+            "examples": [
+              "stopname"
+            ]
+          },
+          "Street": {
+            "$id": "/properties/StoppListe/items/properties/Street",
+            "type": "string",
+            "title": "The Street Schema ",
+            "default": "",
+            "examples": [
+              "street name"
+            ]
+          },
+          "City": {
+            "$id": "/properties/StoppListe/items/properties/City",
+            "type": "string",
+            "title": "The City Schema ",
+            "default": "",
+            "examples": [
+              "city name"
+            ]
+          },
+          "Zip": {
+            "$id": "/properties/StoppListe/items/properties/Zip",
+            "type": "string",
+            "title": "The Zip Schema ",
+            "default": "",
+            "examples": [
+              "zip code"
+            ]
+          },
+          "Pta": {
+            "$id": "/properties/StoppListe/items/properties/Pta",
+            "type": "string",
+            "title": "The Pta Schema ",
+            "examples": [
+              "2018-04-09T12:10:51"
+            ]
+          },
+          "CustomerNr": {
+            "$id": "/properties/StoppListe/items/properties/CustomerNr",
+            "type": "string",
+            "title": "The Customernr Schema ",
+            "default": "",
+            "examples": [
+              "12345678"
+            ]
+          },
+          "DeliveryNumber": {
+            "$id": "/properties/StoppListe/items/properties/DeliveryNumber",
+            "type": "string",
+            "title": "The Deliverynumber Schema ",
+            "default": "",
+            "examples": [
+              "12345678"
+            ]
+          },
+          "InvoiceNumber": {
+            "$id": "/properties/StoppListe/items/properties/InvoiceNumber",
+            "type": "string",
+            "title": "The Invoicenumber Schema ",
+            "default": "",
+            "examples": [
+              "12345678"
+            ]
+          },
+          "AuftragListe": {
+            "$id": "/properties/StoppListe/items/properties/AuftragListe",
+            "type": "array",
+            "items": {
+              "$id": "/properties/StoppListe/items/properties/AuftragListe/items",
+              "type": "object",
+              "required": [
+                "Sortiment",
+                "ThmAnzahl",
+                "OrderNo"
+              ],
+              "properties": {
+                "Sortiment": {
+                  "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/Sortiment",
+                  "type": "integer",
+                  "title": "The Sortiment Schema ",
+                  "default": 0,
+                  "examples": [
+                    2
+                  ]
+                },
+                "ThmAnzahl": {
+                  "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/ThmAnzahl",
+                  "type": "integer",
+                  "title": "The Thmanzahl Schema ",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "OrderNo": {
+                  "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/OrderNo",
+                  "type": "string",
+                  "title": "The Orderno Schema ",
+                  "default": "",
+                  "examples": [
+                    "12345678"
+                  ]
+                },
+                "ArtikelListe": {
+                  "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/ArtikelListe",
+                  "type": "array",
+                  "items": {
+                    "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/ArtikelListe/items",
+                    "type": "object",
+                    "properties": {
+                      "Name": {
+                        "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/ArtikelListe/items/properties/Name",
+                        "type": "string",
+                        "title": "The Name Schema ",
+                        "default": "",
+                        "examples": [
+                          "Cola"
+                        ]
+                      },
+                      "ArtNo": {
+                        "$id": "/properties/StoppListe/items/properties/AuftragListe/items/properties/ArtikelListe/items/properties/ArtNo",
+                        "type": "string",
+                        "title": "The Artno Schema ",
+                        "default": "",
+                        "examples": [
+                          "5551"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

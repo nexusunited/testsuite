@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <lisel-toolbox>
+        <label>Lisel Toolbox</label>
+        <title>Lisel Toolbox</title>
+        <bundle>lisel-toolbox</bundle>
+        <controller>index</controller>
+        <action>index</action>
+    </lisel-toolbox>
+</config>

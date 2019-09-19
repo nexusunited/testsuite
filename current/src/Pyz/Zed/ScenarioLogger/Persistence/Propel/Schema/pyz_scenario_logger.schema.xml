@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          name="zed"
+          xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\ScenarioLogger\Persistence"
+          package="src.Orm.Zed.ScenarioLogger.Persistence">
+
+    <table name="nxs_scenario_logging" isCrossRef="true">
+        <column name="id_nxs_scenario_logging" primaryKey="true" type="INTEGER" autoIncrement="true"/>
+        <column name="event_name" type="VARCHAR"/>
+        <column name="date_time" type="TIMESTAMP"/>
+        <column name="stopp_id" type="VARCHAR"/>
+        <column name="tour_number" type="VARCHAR"/>
+        <column name="delivery_number" type="VARCHAR"/>
+        <column name="customer_number" type="VARCHAR"/>
+        <column name="scem_id" type="VARCHAR"/>
+        <column name="created_at" type="TIMESTAMP" defaultExpr="CURRENT_TIMESTAMP"/>
+        <id-method-parameter value="nxs_scenario_logging_pk_seq"/>
+        <index>
+            <index-column name="stopp_id"/>
+        </index>
+    </table>
+
+</database>

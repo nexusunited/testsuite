@@ -30,19 +30,18 @@ class HelloworldFacadeTest extends Unit
     }
 
     /**
-     * @score 800
+     * @score 1
      */
     public function testExample1()
     {
-        $this->assertSame(false,false);
+        $this->assertFalse(false);
     }
 
     /**
-     * @score 200
+     * @score 2
      */
     public function testExample2()
     {
-        $this->assertSame(true,false);
+        $this->assertTrue(false);
     }
-
 }

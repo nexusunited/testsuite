@@ -1,0 +1,51 @@
+<html>
+{% if annotations is defined %}
+<table border="1">
+    <thead>
+    <tr><td>Endpoints</td><td>Parameters</td></tr>
+    </thead>
+    <tbody>
+    {% for method, annotation in annotations %}
+        <tr>
+            <td>{{ annotation.methodName | nl2br}}</td>
+            <td>
+                {% for parameter_name, parameter_annotation in annotation.transferParams %}
+                    {{ parameter_name }}:
+                    {% if parameter_annotation.is_link %}
+                        <a href="?transfer={{ parameter_annotation.type | escape}}" target="_blank">
+                    {% endif %}
+                    {{ parameter_annotation.type }}
+                    {% if parameter_annotation.is_link %}
+                        </a>
+                    {% endif %}
+                    </br>
+                {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% if transfer_annotation is defined %}
+<table border="1">
+    <thead>
+    <tr><td>Property</td><td>Type</td></tr>
+    </thead>
+    <tbody>
+    {% for name, annotation in transfer_annotation %}
+        <tr>
+            <td>{{ name | nl2br}}</td>
+            <td>
+                {% if annotation.is_link %}
+                    <a href="?transfer={{ annotation.type }}">{{ annotation.type | nl2br }}</a>
+                {% else %}
+                    {{ annotation.type | nl2br }}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+</html>
